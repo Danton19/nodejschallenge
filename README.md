@@ -10,7 +10,7 @@ Basic website built using AngularJS.
 
 ## How to use the app
 ##### After welcome page click on 'Flick' tab
-There you'll see a few inputs:
+###### There you'll see a few inputs:
 1. Search last photos added on Flickr by 'tag'.
 2. Set results limit.
 3. Set offset.
