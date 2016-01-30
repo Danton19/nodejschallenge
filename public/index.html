@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="nodeApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="public/js/vendor/angular.min.js"></script>
+    <script src="public/js/vendor/angular-ui-router.min.js"></script>
+    <script src="public/js/vendor/jquery-sortable-photos.js"></script>
+    <script src="public/js/app.js"></script>
+    <link rel="stylesheet" href="public/css/main.css">
+    <!--CONTROLLERS-->
+    <script src="public/js/controllers/MainController.js"></script>
+    <script src="public/js/controllers/PortController.js"></script>
+    <!--SERVICES-->
+     <script src="public/js/services/getJson.js"></script>
+    <!--DIRECTIVES-->
+    <script src="public/js/directives/onFinishRender.js"></script>
+    <!--FILTERS-->
+</head>
+
+<body>
+    <div ng-controller="MainController">
+    <div>
+        <nav class="navbar navbar-pink navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="home">Node JS Challenge</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">Menu</button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li ng-repeat="item in items" ng-class="{active: isActive(item)}">
+                            <a ui-sref="{{item.path}}" ng-click="scrollAnim()" >{{item.title}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="mainContent" class="content" ui-view></div>
+    <footer>
+        <div class="container">
+            <div class="col-sm-6 col-md-6">
+            </div>
+            <div class="col-sm-6 col-md-6 contact">
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

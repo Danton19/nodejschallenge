@@ -1,0 +1,6 @@
+	nodechallenge
+Key:
+1a2a7ce72234060bf669700fff15ccdc
+
+Secret:
+2a010b3e0e8b38f8

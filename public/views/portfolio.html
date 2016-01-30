@@ -1,0 +1,26 @@
+<div class="homeCont container">
+    <h2>Search pictures on Flickr!</h2>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." ng-model="searchTerm">
+      <span class="input-group-btn">
+        <button class="btn btn-default" ng-disabled="!searchTerm" ng-click="searchPhotos()" type="button">Go!</button>
+      </span>
+    </div>
+	<h2>You can also...</h2>
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="Limit results" ng-model="limitNumber">
+		<input type="text" class="form-control" ng-disabled="!limitNumber" placeholder="Offset" ng-model="offsetNumber">
+	</div>
+	<h2>Search using an image ID number</h2>
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="Enter ID" ng-disabled="searchTerm" ng-model="imgId">
+		<span class="input-group-btn">
+        <button class="btn btn-default" ng-disabled="!imgId" ng-click="searchPhotos()" type="button">Go!</button>
+      </span>
+	</div>
+	<h3 ng-hide="!portfolio.photo.length">Total pictures founded: <span class="label label-success">{{portfolio.photo.length}}</span></h3>
+    <div class="my-container">
+	<div class="alert alert-danger" role="alert" ng-show="!portfolio.photo.length">No pictures with that word for now!</div>
+  <div ng-repeat="photo in portfolio.photo" class="my-item" on-finish-render="ngRepeatFinished"><img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"/></div>
+  </div>
+</div>

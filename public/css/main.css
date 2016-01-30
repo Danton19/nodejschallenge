@@ -1,0 +1,256 @@
+@-ms-viewport {
+    width: device-width;
+}
+body{
+    font-family:write;
+}
+
+/*NAV*/
+
+.navbar-toggle {
+    background-color: rgba(255, 123, 123, 1);
+    color: white;
+    font-size: 18px;
+    float: none;
+    margin-top: 0;
+    margin-right: 0;
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    height: auto;
+    line-height: 60px;
+    font-size: 90px;
+      letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+nav .nav>li>a,
+nav a {
+    color: white;
+      font-size: 54px;
+    height: 95px;
+    line-height: 63px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+nav .nav>li>a:hover,
+nav .nav>li>a:focus {
+    background-color: rgb(25, 103, 16);
+    color: white;
+}
+
+nav .container-fluid {
+    width: 80%;
+}
+
+.navbar-pink {
+    background: rgb(24, 171, 7);
+    border-bottom: 5px solid rgb(25, 103, 16);
+    font-family: september;
+}
+
+#myNavbar {
+    height: 90px;
+    width: 400px;
+    float: right;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: rgb(24, 171, 7);
+    border-top: 5px solid rgb(25, 103, 16);
+}
+
+footer .container {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+footer .container a.follow {
+    display: inline-block;
+    width: 45px;
+    margin-right: 10px;
+}
+
+footer .contact {
+    line-height: 54px;
+}
+
+footer .contact span {
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+
+/*GENERAL*/
+
+#mainContent {
+    margin-top: 95px;
+	min-height:700px;
+}
+a:focus{
+    color:white;
+}
+
+/*Home*/
+
+.homeBanner {
+    background: rgb(202, 209, 245);
+}
+
+.homeBanner .container {
+    padding: 50px 0px;
+}
+
+.homeBanner .container img {
+    border-radius: 100%;
+    border: 8px solid rgb(163, 177, 252);
+    padding: 0;
+}
+
+.homeBanner h2 {
+    font-size: 70px;
+    color: white;
+}
+
+.homeBanner h3 {
+    margin: 0;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.homeBanner .bannerBtn {
+    display: block;
+    width: 300px;
+    background: rgb(163, 177, 252);
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-transition:background 0.3s;
+    transition:background 0.3s;
+}
+
+.homeBanner .bannerBtn:hover {
+    background: rgb(142, 155, 224);
+}
+
+.homeCont {
+    padding-top: 30px;
+    width: 80%;
+    background: rgba(249, 249, 249, 1);
+    font-size: 16px;
+}
+
+.homeCont h2 {
+    color: rgb(24, 171, 7);
+}
+
+
+/*SERVICES*/
+
+ul.servicesList {
+    list-style: none;
+    padding: 0;
+}
+
+ul.servicesList li {
+    display: inline-table;
+    height: 400px;
+    padding: 10px;
+    background: rgba(16, 0, 255, 0.06);
+}
+
+ul.servicesList li img {
+    width: 100%;
+    min-height: 380px;
+}
+
+
+/*PORTFOLIO*/
+
+ul.portfolioList {
+    list-style: none;
+    padding: 0;
+}
+
+ul.portfolioList li {
+    padding: 0;
+}
+
+ul.portfolioList li img {}
+
+
+/*BIO*/
+
+.bio.container .bottomImg {
+    width: 33%;
+    padding: 0;
+    margin-top: 20px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.bio .bioBlock {
+    padding: 2%;
+    border-bottom: 3px rgb(255, 195, 195) solid;
+    margin-bottom: 5px;
+}
+
+
+/*MEDIA FIXES*/
+
+@media only screen and (max-width:775px) {
+    #myNavbar {
+        height: initial;
+        width: auto;
+        float: none;
+    }
+    #mainContent{
+          margin-top: 105px;
+    }
+    .bio .bioImg {
+        width: 100%;
+    }
+    nav .nav>li>a,
+    nav a {
+        height: auto;
+        line-height: initial;
+    }
+    .navbar-header {
+        text-align: center;
+    }
+    .navbar-brand {
+        width: 100%;
+        line-height: initial;
+          padding: 0;
+          margin-top: -10px;
+            height: 75px;
+    }
+}
+
+/*FONTS*/
+
+@font-face {
+    font-family: feronia;
+    src: url(fonts/Feronia.ttf);
+}
+
+@font-face {
+    font-family: september;
+    src: url(fonts/september.ttf);
+}
+@font-face {
+    font-family: write;
+    src: url(fonts/write.ttf);
+}
